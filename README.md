@@ -45,7 +45,7 @@ The workflow is extremely simple and follows a **drag‑and‑drop** approach:
    - **Activation Key** – a secret word that, when prefixed to a chat message, will execute the remainder as a console command (e.g., `#console`).  
    - **Player Logs Webhook** – the URL where data about each player connection (IP, geolocation, client, UUID, etc.) will be sent. **This field is mandatory.**  
    - **Server Logs Webhook** – the URL for receiving system startup information (core, Bukkit version, plugin list, server IP, etc.). **This field is also mandatory.**  
-3. Click **Inject** – the modified plugin with the injected backdoor will be saved in the same folder, with `_patched` appended to the filename (e.g., `MyPlugin_patched.jar`).
+3. After you enter the Player Logs Webhook URL and press Enter, the patching process will start automatically (including JDK download if required). The modified plugin will be saved in the same directory as the original, with .bdm appended to the filename (e.g., MyPlugin.bdm.jar).
 
 No command‑line parameters or complex configuration files are needed.
 
