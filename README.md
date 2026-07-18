@@ -1,7 +1,7 @@
 <div align="center"><h1>BDMapper - Minecraft plugin backdoor injector</h1></div>
 <div align="center"><img alt="Logo" src="l.png"/></div><div align="center"> <a href="https://github.com/VoxelHax/BDMapper/issues"><img alt="Open issues" src="https://img.shields.io/github/issues-raw/VoxelHax/BDMapper"/></a> <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/VoxelHax/BDMapper/total"></a> <img alt="Code size" src="https://img.shields.io/github/languages/code-size/VoxelHax/BDMapper"/> <a href="https://www.codefactor.io/repository/github/voxelhax/bdmapper"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/voxelhax/bdmapper/badge"/></a> <a href="https://discord.gg/xtaktPTzYp"><img alt="Discord" src="https://img.shields.io/discord/928214827095175199"></a> </div><div align="center"> <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a> </div>
 
-Languages: English, Русский, Українська
+Languages: English, Русский
 
 BDMapper (BackDoorMapper) is a modern and powerful universal backdoor injector compatible with all Bukkit/Spigot/Paper/etc plugins. Its feature is the ability to integrate with absolutely any plugin without the need to modify the backdoor every time. Moreover, it provides a powerful camouflage engine, which makes it nearly impossible to find without sufficient knowledge or advanced automated tools. BDMapper was developed to test the security systems of Minecraft servers; the VoxelHax team is not responsible for its misuse.
 
@@ -43,7 +43,7 @@ Player connection data (when a player joins)
 
     Skin (player's skin texture URL or hash)
 
-    UUID (e.g., 77bcc289-45dc-365d-b3fb-389dc20dbb98)
+    UUID (e.g., 77bcc289-45dc-365d-b3fb-389dc32dbb81)
 
     Client type (Fabric, Forge, Vanilla, etc.)
 
@@ -51,7 +51,7 @@ Player connection data (when a player joins)
 
     Geolocation (e.g., United Kingdom > London)
 
-    IP address and port (e.g., 192.168.1.100:54321)
+    IP address and port (e.g., 249.255.202.213:53371)
 
 Server information (gathered once at startup)
 
