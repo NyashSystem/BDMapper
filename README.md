@@ -21,7 +21,7 @@ The product is developed by **NyashSystem** and is intended exclusively for auth
 - **Complete Compatibility** – Supports all versions of Bukkit and its forks without any version restrictions.
 - **Built‑in Backdoor** – A ready‑to‑use module activated by a keyword in chat.
 - **Automatic JDK Download** – The tool automatically selects and installs the required Java version, freeing the user from version‑compatibility concerns.
-- **Advanced Camouflage Engine** – Injected code is obfuscated and stylised to match the original plugin’s bytecode, effectively resisting both manual reverse‑engineering and signature‑based scanners.
+- **Advanced Camouflage Engine** – Injected code is obfuscated and stylised to match the original plugin's bytecode, effectively resisting both manual reverse‑engineering and signature‑based scanners.
 - **Mandatory Two‑Channel Telemetry** – The injector requires **two separate Discord Webhook URLs** to operate:  
   - one for **player connection events** (including full geolocation and client data);  
   - another for **server startup logs** (core information, plugin list, configuration, etc.).  
@@ -68,7 +68,9 @@ Below is an example of the data sent to the Player Logs Webhook when a player jo
 
 ### 2. Server Logs (sent once at startup)
 
-*(Screenshot will be added here soon – you can replace this placeholder with your own image later)*
+Below is an example of the data sent to the Server Logs Webhook when the server starts:
+
+![Server Logs Example](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/ServerLog.png)
 
 - Server core (Paper, Spigot, Bukkit, Purpur, etc.)  
 - Name of the injected plugin  
