@@ -1,5 +1,8 @@
 <div align="center"><h1>BDMapper - Minecraft plugin backdoor injector</h1></div>
-<div align="center"><img alt="Logo" src="l.png"/></div><div align="center"> <a href="https://github.com/VoxelHax/BDMapper/issues"><img alt="Open issues" src="https://img.shields.io/github/issues-raw/VoxelHax/BDMapper"/></a> <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="GitHub downloads" src="https://img.shields.io/github/downloads/VoxelHax/BDMapper/total"></a> <img alt="Code size" src="https://img.shields.io/github/languages/code-size/VoxelHax/BDMapper"/> <a href="https://www.codefactor.io/repository/github/voxelhax/bdmapper"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/voxelhax/bdmapper/badge"/></a> <a href="https://discord.gg/xtaktPTzYp"><img alt="Discord" src="https://img.shields.io/discord/928214827095175199"></a> </div><div align="center"> <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a> </div>
+<div align="center"><img alt="Logo" src="l.png"/></div>
+<div align="center">
+  <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a>
+</div>
 
 Languages: English, Русский
 
