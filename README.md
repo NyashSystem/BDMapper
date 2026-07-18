@@ -102,3 +102,7 @@ While BDMapper is optimised for its built‑in backdoor, advanced users may repl
 BDMapper is provided **solely for legitimate security testing, penetration testing, and educational awareness**. Any use of this tool without prior written consent from the owner of the target system is illegal and unethical.
 
 **I, the developer of BDMapper (NyashSystem), accept no responsibility for any direct or indirect damage resulting from unauthorised, unsanctioned, or illegal use of this software.** The user agrees to comply with all applicable laws and regulations and bears full personal responsibility for the consequences of their actions.
+
+---
+
+##BDMapper is built upon the foundation of OpenBukloit, reimagined with a completely redesigned architecture and enhanced functionality, while preserving the core concepts of the original project.
