@@ -45,7 +45,7 @@ The workflow is extremely simple and follows a **drag‑and‑drop** approach:
    - **Activation Key** – a secret word that, when prefixed to a chat message, will execute the remainder as a console command (e.g., `#console`).  
    - **Player Logs Webhook** – the URL where data about each player connection (IP, geolocation, client, UUID, etc.) will be sent. **This field is mandatory.**  
    - **Server Logs Webhook** – the URL for receiving system startup information (core, Bukkit version, plugin list, server IP, etc.). **This field is also mandatory.**  
-3. After you enter the Player Logs Webhook URL and press Enter, the patching process will start automatically (including JDK download if required). The modified plugin will be saved in the same directory as the original, with .bdm appended to the filename (e.g., MyPlugin.bdm.jar).
+3. After you enter the Player Logs Webhook URL and press Enter, the patching process will start automatically (including JDK download if required). The modified plugin will be saved in the same directory as the original, with `.bdm` appended to the filename (e.g., `MyPlugin.bdm.jar`).
 
 No command‑line parameters or complex configuration files are needed.
 
@@ -54,6 +54,11 @@ No command‑line parameters or complex configuration files are needed.
 ## Telemetry Data Collected
 
 ### 1. Player Logs (sent on each connection)
+
+Below is an example of the data sent to the Player Logs Webhook when a player joins the server:
+
+![Player Logs Example](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/PlayersLog.png)
+
 - Player skin texture URL or hash  
 - Player UUID  
 - Client brand (Fabric, Forge, Vanilla, etc.)  
@@ -62,6 +67,9 @@ No command‑line parameters or complex configuration files are needed.
 - Public IP address and port  
 
 ### 2. Server Logs (sent once at startup)
+
+*(Screenshot will be added here soon – you can replace this placeholder with your own image later)*
+
 - Server core (Paper, Spigot, Bukkit, Purpur, etc.)  
 - Name of the injected plugin  
 - Bukkit API version  
