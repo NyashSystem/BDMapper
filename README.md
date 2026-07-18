@@ -79,11 +79,11 @@ BDMapper significantly reduces anti‑cheat detections compared to its predecess
 
 | Tool | Detection Rate |
 |------|----------------|
-| **OpenBukloit** | High (many detections) – see screenshot below |
-| **BDMapper** | Very low (few detections) – see screenshot below |
+| **OpenBukloit** | High (detected exploit) – see screenshot below |
+| **BDMapper** | Very low (undetected exploit) – see screenshot below |
 
 ![OpenBukloit detections](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/OpenBukloit.png)  
-*OpenBukloit – multiple anti‑cheat alerts*
+*OpenBukloit – exploit anti‑hack alerts*
 
 ![BDMapper detections](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/BDMapper.png)  
 *BDMapper – minimal alerts, superior stealth*
