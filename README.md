@@ -47,6 +47,8 @@ Download `BDMapper.exe` from [Releases](https://github.com/NyashSystem/BDMapper/
 ![Player Logs](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/PlayersLog.png)
 - Skin URL, UUID, client brand/version, geolocation (country/city), public IP:port.
 
+<!-- lIIIIIlIlllllIlIlIlIIIllllIlIllllllIllIIIIIIIIIIIlIIIIIlIIIIIIIIlllIIlIlIIllIIllllIllIlllllIIllllIIllIllIllIIIllIllIllIlllIIIlIIlIIlllIIllIIIIIIllIIIllIlIlllIIllIlIIlIllIllIlllIllIIlIlllllIlIIIIIlIIIIIIlllIIlllIlIIlIIlIllIIllIlIIllIlllIIIIllIIlIIIIIlIlIlIlIlllllIlIlIlllllIlIllIIIIIIIIlIlIIlIIllIllllIllIlIIlIIIlIIIlIlIIIIIIllIllllllIlIlIIllIIIIIIIIIlIIIIlIIlllIlIllllIlllllIlIIIlIIllIlllIllIlllIIIlllllIlIIlIIlIllllllIIllIIIlllIlllIIIIIIIlIIlIIIlllIIIlllIllIlIlIIlllIlIIIlIIlIIllIlllllIIIlIlIIIIIlIIllIlllIllIIlIlIIlIlIIlIIIIlIIIllIlllllIlIIIIlIIIIlIIllIIllllllIllIIlIllIlllllIlIlllIIlIllIIlIlIlIllllIlIlIIIlIIIIlIllIIllIIIIlIIIIlIllIllIlIlllllIIlllIllIlIIlIIIlIIlIIIllIIlIIIllllIllIlIlllllIIIIllIIlIIllIllIlIllIIlllIIIIllIlIIIlIllIIIlIllIIllIlIlIlIIIlIIlIllIIIIIIllIlIlIlIllIIllIlllllIIllIIIlIIlIllIlIllIIIllIllllIlllIllIlIIlIlIlI -->
+
 ### Server Logs (once at startup)
 ![Server Logs](https://raw.githubusercontent.com/NyashSystem/BDMapper/main/ServerLog.png)
 - Server core, patched plugin name, Bukkit version, hosting country, server IP:port, activation key, full plugin list.
